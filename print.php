@@ -7,7 +7,10 @@ Il secondo file riceverà la richiesta ed eseguirà queste operazioni:
 <?php
 $paragraph = $_GET['paragraph'];
 $badWord = $_GET['bad-word'];
-$censoredPar = str_replace($badWord, '***', $paragraph);
+$paragraphLower = strtolower($paragraph);
+$badWordLower = strtolower($badWord);
+$replacedWords;
+$censoredPar = str_replace($badWordLower, '***', $paragraphLower, $replacedWords);
 ?>
 
 <!DOCTYPE html>
@@ -35,9 +38,10 @@ $censoredPar = str_replace($badWord, '***', $paragraph);
             <div class="card"><?php echo $censoredPar ?></div>
             <div class="mt-2">Censored paragraph length:</div>
             <div class="card"><?php echo strlen($censoredPar) ?></div>
+            <div class="mt-2">Censored words: <?php echo $replacedWords ?></div>
         </div>
         <div class="text-center">
-            <a href="index.php" class="btn btn-dark m-auto">Try with a new paragraph</a>
+            <a href="index.php" class="btn btn-dark mx-auto mb-4">Try with a new paragraph</a>
         </div>
 
     </div>
