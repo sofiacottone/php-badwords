@@ -19,7 +19,7 @@
                     <textarea name="paragraph" id="paragraph" rows="10" class="col-6" required></textarea>
                 </div>
                 <div class="d-flex gap-2 my-4">
-                    <label for="bad-word" class="col-3">Insert a bad word:</label>
+                    <label for="bad-word" class="col-3">Insert a word to be censured:</label>
                     <input id="bad-word" name="bad-word" type="text" class="col-6" require>
                 </div>
                 <button type="submit" class="btn btn-dark col-4 mx-auto mt-5">Submit</button>
